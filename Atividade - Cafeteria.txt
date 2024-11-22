@@ -1,0 +1,17 @@
+a) Qual estrutura de dados você utilizaria para gerenciar os pedidos da cafeteria, considerando que os pedidos devem ser processados de forma eficiente e respeitando as prioridades dos clientes VIP? Explique a escolha.
+ 
+Utilizaria a estrutura de dados Fila, a Fila utiliza o conceito FIFO (First In First Out), e os pedidos devem ser processados em ordem contínua, ou seja, processamos primeiramente 
+os primeiros pedidos cadastrados, e se tiver algum com prioridade podemos utilizar o (Priority Queue) para processar primeiro os pedidos com prioridade. 
+
+b) Qual operação específica você usaria para cada uma das features no contexto da estrutura de dados escolhida?
+
+Adicionar pedido, pode ser utilizado com um método add()
+Processar próximo pedido, podemos usar um poll(), pois processa e remove o primeiro item da fila.
+Visualizar pedidos, podemos usar um for-each.
+Remover podemos usar o remove().
+No atualizar prioridade podemos remover e adicionar de volta com nova prioridade.
+
+c) Explique como o sistema de pedidos deve lidar com a entrada de um clienteVIP. A estrutura de dados escolhida suporta essa funcionalidade? Se sim, explique como. Se não, sugira uma alteração ou solução alternativa.
+
+Podemos usar um Booleano que verifica se o cliente é vip ou não, e podemos atribuir True ou False no Main quando for criar um novo pedido, para garantir a prioridade.
+A estrutura de dados Fila suporta essa funcionalidade, pois ao adicionar um pedido VIP, podemos removê-lo da fila e reintroduzi-lo em uma posição que respeite a prioridade.
